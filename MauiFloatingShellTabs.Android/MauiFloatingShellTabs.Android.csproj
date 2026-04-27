@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>23.0</SupportedOSPlatformVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MauiFloatingShellTabs.Android</AssemblyName>
+    <RootNamespace>MauiFloatingShellTabs.Android</RootNamespace>
+
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>MauiFloatingShellTabs.Android</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Moh</Authors>
+    <Description>Reusable floating Android Shell tab bar for .NET MAUI apps.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>maui;android;shell;tabbar</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageOutputPath>../LocalPackages</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="Platforms/Android/Resources/values/styles.xml"
+          Pack="true"
+          PackagePath="contentFiles/any/any/Platforms/Android/Resources/values/" />
+    <None Include="buildTransitive/MauiFloatingShellTabs.Android.targets"
+          Pack="true"
+          PackagePath="buildTransitive/MauiFloatingShellTabs.Android.targets" />
+  </ItemGroup>
+</Project>

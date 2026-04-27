@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <MauiFloatingShellTabsContentRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../contentFiles/any/any/'))</MauiFloatingShellTabsContentRoot>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidResource Include="$([System.IO.Path]::Combine('$(MauiFloatingShellTabsContentRoot)', 'Platforms', 'Android', 'Resources', 'values', 'styles.xml'))"
+                     Link="Platforms/Android/Resources/values/floatingshelltabs_styles.xml" />
+  </ItemGroup>
+</Project>

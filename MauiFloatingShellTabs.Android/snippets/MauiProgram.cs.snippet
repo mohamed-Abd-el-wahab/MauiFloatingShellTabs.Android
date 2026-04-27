@@ -1,0 +1,10 @@
+#if ANDROID
+using MauiFloatingShellTabs.Android;
+#endif
+
+builder
+    .UseMauiApp<App>()
+#if ANDROID
+    .UseFloatingShellTabBar()
+#endif
+    ;
