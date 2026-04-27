@@ -15,7 +15,7 @@ using AOutline = Android.Graphics.Outline;
 using AView = Android.Views.View;
 using AViewGroup = Android.Views.ViewGroup;
 
-namespace MauiFloatingShellTabs.Android;
+namespace MauiFloatingTabBar.Android;
 
 public static class FloatingShellTabBarExtensions
 {

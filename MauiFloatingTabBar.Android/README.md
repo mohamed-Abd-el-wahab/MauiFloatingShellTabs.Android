@@ -1,11 +1,13 @@
-# MauiFloatingShellTabs.Android
+# MauiFloatingTabBar.Android
 
 Reusable NuGet package for adding an Android floating Shell tab bar to another .NET MAUI app.
+
+Repository: https://github.com/mohamed-Abd-el-wahab/MauiFloatingTabBar.Android
 
 ## Folder layout
 
 ```text
-MauiFloatingShellTabs.Android/
+MauiFloatingTabBar.Android/
   Platforms/
     Android/
       Resources/
@@ -21,7 +23,7 @@ MauiFloatingShellTabs.Android/
 ## Build the package
 
 ```bash
-dotnet build MauiFloatingShellTabs.Android/MauiFloatingShellTabs.Android.csproj -c Release
+dotnet build MauiFloatingTabBar.Android/MauiFloatingTabBar.Android.csproj -c Release
 ```
 
 The `.nupkg` is written to:
@@ -32,7 +34,7 @@ LocalPackages
 
 ## Consume in another app
 
-1. Add `reusable/LocalPackages` as a local NuGet source.
+1. Add `reusable/LocalPackages` as a local NuGet source (or install from nuget.org).
 2. Add the package only for Android.
 3. Apply the `snippets/MainActivity.cs.snippet` change.
 4. Apply the `snippets/MauiProgram.cs.snippet` change.
@@ -41,7 +43,7 @@ Example `csproj`:
 
 ```xml
 <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
-  <PackageReference Include="MauiFloatingShellTabs.Android" Version="1.0.0" />
+  <PackageReference Include="MohamedAbdelwahab.FloatingTabBar.Android" Version="1.0.0" />
 </ItemGroup>
 ```
 
@@ -77,7 +79,7 @@ builder.UseFloatingShellTabBar(options =>
 
 ## What the package includes
 
-- The `MauiFloatingShellTabs.Android` assembly
+- The `MauiFloatingTabBar.Android` assembly
 - A transitive Android resource file that adds `FloatingShellTabsMaterialTheme`
 
 ## Notes

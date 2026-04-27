@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <MauiFloatingTabBarContentRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../contentFiles/any/any/'))</MauiFloatingTabBarContentRoot>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidResource Include="$([System.IO.Path]::Combine('$(MauiFloatingTabBarContentRoot)', 'Platforms', 'Android', 'Resources', 'values', 'styles.xml'))"
+                     Link="Platforms/Android/Resources/values/floatingtabbar_styles.xml" />
+  </ItemGroup>
+</Project>
